@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Séptima clase</title>
+        <style>
+            [data-theme="light"] { --color-bg: #eceff1; --color-fg: #263238; }
+
+            [data-theme="dark"] { --color-bg: #263238; --color-fg: #eceff1; }
+
+            * { margin: 0; padding: 0; }
+
+            body { font-family: monospace; color: var(--color-fg); background: var(--color-bg); }
+
+            article { padding: 1rem; width: min(90%, 500px); margin: 2rem auto; text-align: center; }
+
+            article:nth-child(3) { width: min(90%, 1000px); margin-bottom: 5rem; }
+
+            h2 { font-size: 1.5rem; margin: 1.5rem auto; line-height: 1; }
+
+            p { margin: 0.75rem auto; line-height: 1.5; }
+
+            input[type="radio"] { accent-color: #232323; }
+
+            @keyframes pedrope {
+                0% { transform: rotate(0); }
+                100% { transform: rotate(360deg); }
+            }
+
+            figure { width: 50%; margin: 2rem auto; background: #fff; }
+
+            img { width: 100%; }
+
+            img.animate { animation: pedrope 2s linear infinite; }
+
+            div.portrait > svg { font-size: 7.5%; stroke-width: 0; fill: white; alignment-baseline: middle; text-anchor: start; display: block; margin:3rem; }
+
+            div.landscape { display: inline-block; }
+
+            div.landscape > svg { width: 6%; font-size: 12%; stroke-width: 0; fill: black; alignment-baseline: middle; text-anchor: middle; }
+
+            div.landscape > svg:nth-child(5) { margin-left:3%; margin-right:4%; }
+
+            div.landscape > svg:nth-child(7) { margin-left:2%; }
+
+            @media (orientation: portrait) {
+                div.landscape { display: none; }
+            }
+
+            @media (orientation: landscape) {
+                div.portrait { display: none; }
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h2>Del innerHTML al setAttribute</h2>
+            <!--usando input type="radio"-->
+            <p>
+                <input type="radio" name="stroke" value="0.25" onchange="primera(this.value)" /> LIGHT <input type="radio" name="stroke" value="1" checked onchange="primera(this.value)" /> NORMAL
+                <input type="radio" name="stroke" value="1.75" onchange="primera(this.value)" /> BOLD
+            </p>
+            <!--un svg que tomo de https://feathericons.com/-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </svg>
+            <!--usando input type="range"-->
+            <p><input type="range" min="0" max="359" step="1" value="0" onchange="segunda(this.value)" /></p>
+            <p>Stroke: HSL(<span>0</span>,100%,50%)</p>
+            <!--usando input type="color"-->
+            <p>Fill: <input type="color" value="#FFFFFF" onchange="tercera(this.value)" /></p>
+        </article>
+        <article>
+            <h2>Del setAttribute al AddClass</h2>
+            <!--usando input type="checkbox"-->
+            <input type="checkbox" name="animado" onchange="cuarta()" /> <label>ANÍMATE, PEDRO</label>
+            <figure>
+                <img src="https://raw.githubusercontent.com/profesorfaco/opr/refs/heads/main/clase-07/img/mapache.png" />
+            </figure>
+        </article>
+        <article>
+            <h2>Y cerremos con "un SVG responsive"</h2>
+            <div class="portrait"></div>
+            <div class="landscape"></div>
+        </article>
+        <script>
+            // Hay muchos tipos de inputs: https://www.w3schools.com/html/html_form_input_types.asp
+            // Acá usaremos cuatro: radio, range, color y checkbox
+
+            function primera(valor) {
+                document.querySelectorAll("svg")[0].setAttribute("stroke-width", valor);
+            }
+            primera(1);
+
+            function segunda(valor) {
+                document.querySelectorAll("svg")[0].setAttribute("stroke", "hsl(" + valor + ",100%,50%)");
+                document.querySelector("span").innerHTML = valor;
+            }
+            segunda(0);
+
+            function tercera(valor) {
+                document.querySelector("rect").setAttribute("fill", valor);
+            }
+
+            function cuarta() {
+                if (document.querySelector("input[type=checkbox]").checked == true) {
+                    document.querySelector("img").classList.add("animate");
+                } else {
+                    document.querySelector("img").removeAttribute("class");
+                    // también podría borrar la clase, dejando un class vacío
+                    // document.querySelector("img").classList.remove("animate");
+                }
+            }
+
+            async function quinta() {
+                const consulta = await fetch("https://raw.githubusercontent.com/magdalenacorthorn/json-clase-7/refs/heads/main/csvjson.json");
+                const data = await consulta.json();
+                console.log(data);
+                const svgMobile = document.querySelectorAll("div.portrait")[0];
+                const svgOther = document.querySelectorAll("div.landscape")[0];
+                data.forEach((v, i) => {
+                    svgMobile.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 ${v.Comparado}"><circle cx="5" cy="${v.Comparado}" r="${v.Comparado}" fill="white"></circle><text x="${v.Comparado + 13}" y="${v.Comparado+0.3}">${v.Arbol}</text></svg>`;
+                    svgOther.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 129">
+
+            <g transform="scale(${v.Comparado/12})">
+
+          <path d="M224.793,366.818a4,4,0,1,0-7.994-.3l-.571,15.052a4,4,0,0,0,3.846,4.149c.051,0,.1,0,.154,0a4,4,0,0,0,3.994-3.849Z"/><path d="M219.426,402.778a4,4,0,0,0-4.149,3.846l-3.06,80.643a4,4,0,0,0,3.845,4.148l.155,0a4,4,0,0,0,3.994-3.849l3.06-80.642A4,4,0,0,0,219.426,402.778Z"/><path d="M144.058,261.794a9.367,9.367,0,0,1,8.385,9.009h.017a9.745,9.745,0,0,1-3.789,7.94,36.419,36.419,0,0,0,39.79,60.835,29.7,29.7,0,0,0,3.393-2.34A43.757,43.757,0,0,1,241.16,334.4l.77-26.442a.265.265,0,0,0-.069-.184L167.55,226.653a4,4,0,0,1,5.44-5.832l69.552,55.358a.259.259,0,0,0,.421-.194l1.886-55.439a.259.259,0,0,0-.046-.155l-48.07-70.357a4,4,0,0,1,6.131-5.085l42.889,42.889a.259.259,0,0,0,.442-.173l4.254-100.686a4,4,0,0,1,3.968-3.831h.029a4,4,0,0,1,3.993,3.775l4.215,74.457a.259.259,0,0,0,.414.192l43.388-32.541a4,4,0,0,1,5.4,5.839l-48.382,55.112a.267.267,0,0,0-.064.18l1.857,50.138a.26.26,0,0,0,.406.2l62.672-43.167a4,4,0,0,1,5.1,6.122l-67.08,67.081a.258.258,0,0,0-.076.194l3.3,80.3a58.6,58.6,0,0,0,37.508-2.6,82.689,82.689,0,0,1,37.632-5.732,44.858,44.858,0,0,0,33.517-11.616,41.5,41.5,0,0,0,13.658-30.325c.012-.927,0-1.869-.046-2.8a46.457,46.457,0,0,0-26.25-39.17,8.237,8.237,0,0,1,2.669-15.682,36.424,36.424,0,0,0,3.044-72.1,9.568,9.568,0,0,1-4.81-16.44,30.472,30.472,0,0,0,7.821-33.174,25.37,25.37,0,0,0-13.863-14.817c-7.588-3.231-16.931-2.961-25.636.741a8.043,8.043,0,0,1-8.292-1.127A7.96,7.96,0,0,1,325,95.534c7.2-10.646,8.785-22.036,4.237-30.466A30.279,30.279,0,0,0,291.9,51.142c-4.986,1.9-10.807-.908-12.876-5.963A33.867,33.867,0,0,0,246.526,20a33.387,33.387,0,0,0-33.37,30.229,4,4,0,0,1-3.981,3.611h-.282c-14.388,0-27.391,9.177-31.628,22.342a34.023,34.023,0,0,0,3.331,29.025,4,4,0,0,1-2.348,5.994l-.914.245a4.021,4.021,0,0,1-1.457.115,36.42,36.42,0,0,0-28.523,62.983,8.654,8.654,0,0,1,2.823,6.564,8.5,8.5,0,0,1-7.5,8.256,36.423,36.423,0,0,0,1.382,72.431Z"/><path d="M267.378,492,258.3,271.063a8.282,8.282,0,0,1,2.412-6.178l36.129-36.129-26.623,18.337a8.259,8.259,0,0,1-12.938-6.5l-1.857-50.137a8.223,8.223,0,0,1,2.048-5.757l22.954-26.147-12.555,9.417a8.263,8.263,0,0,1-12.679-3.676l-1,23.706a8.259,8.259,0,0,1-14.092,5.491L227.531,180.93l23.878,34.947a8.209,8.209,0,0,1,1.435,4.94l-1.886,55.44a8.259,8.259,0,0,1-13.4,6.181l-29.742-23.672,39.942,43.6a8.217,8.217,0,0,1,2.166,5.821L244.573,492Z"/></svg>
+                    </g>
+
+                    <circle cx="12" cy="13" r="${v.Comparado*2}" fill="black"></circle><text x="6" y="15">${v.Arbol}</text></svg>`;
+                });
+            }
+
+    
+
+            quinta().catch((error) => console.error(error));
+
+            function sexta() {
+                var ancho = window.innerWidth;
+                var alto = window.innerHeight;
+                if (ancho < alto) {
+                    document.querySelector("html").setAttribute("data-theme", "dark");
+                } else {
+                    document.querySelector("html").setAttribute("data-theme", "light");
+                }
+            }
+            sexta();
+            window.addEventListener("resize", sexta);
+        </script>
+    </body>
+</html>
