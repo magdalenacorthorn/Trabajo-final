@@ -15,6 +15,8 @@
 
  ## Fuentes de inspiración.
     *Routers Graphics https://www.reuters.com/graphics/ 
-    *South China Morning Post https://www.scmp.com/infographics 
+    *South China Morning Post [https://www.scmp.com/infographics](https://multimedia.scmp.com/infographics/news/hong-kong/article/3285210/monkeys-zoo/) 
+    *https://buscaves.cl/identifica 
+    * 
 
   Estas fuentes servirán de inspiración en cuanto a estrategias visuales, uso de color y estética.
