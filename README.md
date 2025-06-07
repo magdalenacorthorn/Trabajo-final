@@ -16,12 +16,13 @@
 
  ## Fuentes de inspiración.
  ![image](https://github.com/user-attachments/assets/61366f1a-4bb2-4184-943c-f772ca1a3911)
+  *https://pudding.cool/2020/11/cloud-zoo/
+  De este referente rescato la diagramación del mapa, con la interacción a la derecha de este, haciéndose entneder la relación entre ambos elementos gráficos.
+  
+![image](https://github.com/user-attachments/assets/08a2a0cc-875a-4d1b-b4ba-ba6d2af6b06d)
+*https://pudding.cool/2020/08/campaign-colors/
+De esta página me gusta el sistema de filtro, el cual podría ser muy útil para el objetivo de mi página
 
-    *https://pudding.cool/2020/11/cloud-zoo/
-
-    * De este referente rescato la diagramación del mapa, con la interacción a la derecha de este, haciéndose entneder la relación entre ambos elementos gráficos.
-
-    
 
 
 
