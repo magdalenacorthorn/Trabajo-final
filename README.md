@@ -16,7 +16,8 @@
 
  ## Fuentes de inspiración.
     *https://pudding.cool/2020/11/cloud-zoo/  
-    * ![pantalla mapa](https://github.com/user-attachments/assets/99caf543-2dbb-4d5b-a672-c62ea63ffc2a)
+    ![image](https://github.com/user-attachments/assets/92c7d052-6ff4-4076-b432-7a0b7b286d7d)
+
     * De este referente rescato la diagramación del mapa, con la interacción a la derecha de este, haciéndose entneder la relación entre ambos elementos gráficos.
 
     
