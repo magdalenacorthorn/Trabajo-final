@@ -15,8 +15,9 @@
    *GoChile https://www.gochile.cl/es/flora-fauna/aves.htm
 
  ## Fuentes de inspiración.
-    *https://pudding.cool/2020/11/cloud-zoo/  
-    ![image](https://github.com/user-attachments/assets/92c7d052-6ff4-4076-b432-7a0b7b286d7d)
+ ![image](https://github.com/user-attachments/assets/61366f1a-4bb2-4184-943c-f772ca1a3911)
+
+    *https://pudding.cool/2020/11/cloud-zoo/
 
     * De este referente rescato la diagramación del mapa, con la interacción a la derecha de este, haciéndose entneder la relación entre ambos elementos gráficos.
 
