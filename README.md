@@ -6,7 +6,8 @@
 1. Nombre cientifico
 2. Nombre común
 3. Hábitat
-4. Cracaterísticas reconocibles.
+4. Tamaños
+5. Cracaterísticas reconocibles.
   
  ## Fuentes de información:
    *Aves de Chile https://www.avesdechile.cl/
@@ -18,5 +19,7 @@
     *South China Morning Post [https://www.scmp.com/infographics](https://multimedia.scmp.com/infographics/news/hong-kong/article/3285210/monkeys-zoo/) 
     *https://buscaves.cl/identifica 
     * 
+    ![Cloud Zoo](pantalla mapa.jpg)
+
 
   Estas fuentes servirán de inspiración en cuanto a estrategias visuales, uso de color y estética.
