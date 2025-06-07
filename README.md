@@ -15,11 +15,12 @@
    *GoChile https://www.gochile.cl/es/flora-fauna/aves.htm
 
  ## Fuentes de inspiración.
-    *Routers Graphics https://www.reuters.com/graphics/ 
-    *South China Morning Post [https://www.scmp.com/infographics](https://multimedia.scmp.com/infographics/news/hong-kong/article/3285210/monkeys-zoo/) 
-    *https://buscaves.cl/identifica 
-    * 
-    ![Cloud Zoo](pantalla mapa.jpg)
+    *https://pudding.cool/2020/11/cloud-zoo/  
+    * ![pantalla mapa](https://github.com/user-attachments/assets/99caf543-2dbb-4d5b-a672-c62ea63ffc2a)
+    * De este referente rescato la diagramación del mapa, con la interacción a la derecha de este, haciéndose entneder la relación entre ambos elementos gráficos.
+
+    
+
 
 
   Estas fuentes servirán de inspiración en cuanto a estrategias visuales, uso de color y estética.
