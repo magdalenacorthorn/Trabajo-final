@@ -6,12 +6,55 @@
         <title>Aves de Chile por región</title>
     </head>
     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
          body {
               margin: 0;
-              padding: 2rem;
               background-color: #fefae0;
-              font-family: sans-serif;
+              font-family: "Raleway";
             }
+
+            .comienzo{
+              position: absolute;
+              height: 628px;
+              overflow: hidden;
+            }
+
+            .comienzo img{
+              width: 100%;
+            }
+
+            .inicio{
+              position: relative;
+              margin: 0 auto;
+              text-align: center;
+              background-color: #333d29;
+              padding: 4rem 2rem;
+              height: 500px;
+              width: 1000px;
+              border-radius: 10px;
+              overflow: hidden;
+            }
+
+
+            .titulo{
+              font-size: calc(1.5em + 5vw);
+              color: #fefae0;
+              font-weight: bold;
+            }
+
+            .subtitulo{
+              color: #80875e;
+              font-size: calc(1.5em + 1vw);
+            }
+
+            .intro{
+              padding-top: 3rem;
+              padding-left: 10rem;
+              padding-right: 10rem;
+              color: #fefae0;
+            }
+
 
             .contenedor {
               display: flex;
@@ -19,102 +62,132 @@
               gap: 2rem;
               position: relative;
               margin: auto;
+              padding-top: 1rem;
+              padding-left: 5rem;
             }
 
-            .mapa {
-              margin-left: 3rem;
-              margin-top: 3rem;
-              display: block;
-            }
-
-            .marker {
+            .pajaro-volando {
               position: absolute;
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              cursor: pointer;
-              border: 2px solid #fff;
-              transition: transform 0.2s;
-            }
-            .marker:hover {
-              transform: scale(1.3);
+              left: -10px;
+              top: 670px;
+              width: 80px;
+              animation: volar 20s ease-in-out infinite;
+              z-index: 10;
+              pointer-events: none;
             }
 
-            .categorizacion {
-              max-width: 300px;
+            .pajaro-volando img {
+              width: 50%;
+              height: auto;
             }
 
-            .categorizacion select {
-              margin-left: 0.5rem;
-            }
-
-            .region-a {
-              background-color: #173a13;
-            }
-
-            .region-b {
-              background-color: #79963c;
-            }
-
-            .tooltip {
-                position: absolute;
-                background-color: #fff;
-                padding: 4px 8px;
-                border-radius: 4px;
-                box-shadow: 0 0 5px rgba(0,0,0,0.2);
-                font-size: 12px;
-                display: none;
+            @keyframes volar {
+              0% {
+                left: -10px;
+                transform: translateY(0px) rotate(0deg);
               }
-
-            .marker:hover + .tooltip {
-                display: block;
+              20% {
+                transform: translateY(-10px) rotate(5deg);
               }
-
-            table {
-              margin-top: 1rem;
+              40% {
+                transform: translateY(10px) rotate(-5deg);
+              }
+              60% {
+                transform: translateY(-10px) rotate(3deg);
+              }
+              80% {
+                transform: translateY(5px) rotate(-3deg);
+              }
+              100% {
+                left: 100%;
+                transform: translateY(0px) rotate(0deg);
+              }
             }
 
+            .elige{
+              padding-top: 4rem;
+              padding-left: 5rem;
+              color: #333d29;
+            }
+
+            .instrucción{
+              padding-left: 5rem;
+              color: #333d29;
+            }
+
+            .chico{
+              display: inline-block;
+              padding-left: 3rem;
+              max-width: 100px;
+              height: auto;
+              border: 1px solid #333d29;
+            }
+
+            .zonacontenido img{
+              display: inline-block;
+              position: absolute;
+              max-width: 1000px;
+              height: auto;
+            }
 
     </style>
-    <body>
-     <h1>Introducción de la cantidad de aves en Chile, y sus condiciones habitacionales en cada región</h1>
-        <h2>Objetivo de la página</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et tristique neque, non dictum dolor. Nulla egestas ipsum nisl, vel hendrerit mauris hendrerit non. Sed sollicitudin libero ut sem placerat hendrerit. Curabitur id suscipit risus. Vestibulum arcu diam, pulvinar porta nunc a, faucibus efficitur quam. Praesent sed odio est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis quis nulla vehicula, elementum felis sed, tristique felis. Vivamus suscipit augue porta, dapibus velit efficitur, scelerisque diam.</p>
 
+    <body>
+        <div class="comienzo">
+          <img src="fondo.jpg">
+        </div>
+
+        <div class="inicio">
+          <h1 class="titulo">Aves de Chile</h1>
+          <h2 class="subtitulo">Según la zona en la que habitan</h2>
+          <p class="intro">Chile se caracteriza por una gran diversidad de ecosistemas, producto de su extensa geografía que abarca desde el desierto más árido del mundo hasta los fríos bosques australes. Para comprender mejor esta riqueza natural, el país ha sido dividido en distintas zonas geográficas, cada una con condiciones climáticas y ambientales únicas que influyen directamente en la presencia y distribución de sus aves.</p>
+        </div>
+
+        <div class="pajaro-volando">
+          <img src="pajaro.png" alt="Pájaro volando" />
+        </div>
+
+        <h2 class="elige">¿Qué zona te gustaría ver?</h2>
+        <p class="instrucción">Haz click sobre la zona en el mapa de la izquierda</p>
 
         <div class="contenedor">
-            <div class="mapa">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Chile_blank_map.svg">
+            <img src="mapaoriginal.svg" usemap="#zonasChile" class="chico">
 
-            <div class="marker region-a" style="top: 80px; left: 150px;"></div>
-            <div class="tooltip" style="top: 100px; left: 150px;">Región A</div>
+            <map name="zonasChile">
+              <area shape="rect" coords="37,52,130,170" alt="Norte Grande" title="Norte Grande" onclick="mostrarZona('ngrande')" />
+              <area shape="rect" coords="37,170,130,215" alt="Norte Chico" title="Norte Chico" onclick="mostrarZona('nchico')" />
+              <area shape="rect" coords="37,215,130,300" alt="Zona Centro" title="Centro" onclick="mostrarZona('centro')" />
+              <area shape="rect" coords="37,300,130,395" alt="Sur" title="Sur" onclick="mostrarZona('sur')" />
+              <area shape="rect" coords="37,395,130,550" alt="Austral" title="Austral" onclick="mostrarZona('austral')" />
+            </map>
 
-            <div class="marker region-b" style="top: 200px; left: 170px;"></div>
-            <div class="tooltip" style="top: 220px; left: 170px;">Región B</div>
-            </div>
+            <div class="zonacontenido">
+              <img id="avesImagen" src="nortegrande.png" class="nortegrande">
 
-            <div class="categorizacion">
-              <h2>Categorizar según
-                <select>
-                  <option>Hábitat</option>
-                  <option>Tamaño</option>
-                </select>
-              </h2>
-
-              <p><strong>El ave que buscas podría ser</strong></p>
-
-              <table>
-                <tr>
-                  <th>Imagen</th>
-                  <th>Nombre común</th>
-                  <th>Nombre científico</th>
-                  <th>Pequeña descripción</th>
-                </tr>
-              </table>
-            </div>
-          </div>
+        </div>
 
         <script>
+
+          function mostrarZona(zona) {
+              const imagen = document.getElementById('avesImagen');
+
+              if (zona === 'ngrande') {
+                imagen.src = 'nortegrande.png';
+                imagen.alt = 'Aves del Norte Grande';
+              } else if (zona === 'nchico') {
+                imagen.src = 'nortechico.png';
+                imagen.alt = 'Aves del Norte Chico';
+              } else if (zona === 'centro') {
+                imagen.src = 'centro.png';
+                imagen.alt = 'Aves de la Zona Centro';
+              } else if (zona === 'sur') {
+                imagen.src = 'sur.png';
+                imagen.alt = 'Aves del Sur';
+              } else if (zona === 'austral') {
+                imagen.src = 'austral.png';
+                imagen.alt = 'Aves de la Zona Austral';
+              }
+            }
             async function datos() {
                 const consulta = await fetch("https://raw.githubusercontent.com/magdalenacorthorn/Trabajo-final/refs/heads/main/csvjson%20(2).json");
                 data = await consulta.json();
