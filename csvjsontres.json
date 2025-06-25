@@ -1,0 +1,524 @@
+[
+  {
+    "nombre_comun": "Carpintero Negro",
+    "region": "Entre Zona Centro y Zona Austral",
+    "zona_total": 3,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Picaflor de Arica",
+    "region": "En Norte Grande ",
+    "zona_total": 1,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Becasina grande",
+    "region": "En Zona Austral",
+    "zona_total": 1,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Chorlo de Magallanes",
+    "region": "En Zona Austral",
+    "zona_total": 1,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Picaflor de Juan Fernández",
+    "region": "En Zona Centro",
+    "zona_total": 1,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Saca-tu-real",
+    "region": "En Norte Grande",
+    "zona_total": 1,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Pingüino de Humboldt",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Chorlo de Campo",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Flamenco Chileno",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Gaviotin Sudamericano",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Golondrina de Mar",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Jote de Cabeza Negra",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Playero blanco",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Zarapito de pico recto",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Picaflor Cordillerano",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Run-run",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Becasina Común",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Chuncho",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Churrete común",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Colegial",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Tagua Común",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Cometocino de Gay",
+    "region": "Entre Norte Grande y Zona Centro",
+    "zona_total": 3,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Pato Jergón Chico",
+    "region": "Entre Norte Chico y Zona Austral",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Chorlo Chileno",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Gaviota  Austral",
+    "region": "Entre Zona Centro y Zona Austral",
+    "zona_total": 3,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Ñandú",
+    "region": "Entre Norte Grande y Norte Chico",
+    "zona_total": 2,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Cisne Coscoroba",
+    "region": "Entre Zona Sur y Zona Austral",
+    "zona_total": 2,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Rayadito",
+    "region": "Entre Norte Chico y Zona Austral",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Bandurria",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valles"
+  },
+  {
+    "nombre_comun": "Caiquén",
+    "region": "Entre Zona Sur y Zona Austral",
+    "zona_total": 2,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Carpinterito",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valles"
+  },
+  {
+    "nombre_comun": "Cóndor",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Chincol",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Cormorán Yeco",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Garza grande",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Gaviota Andina",
+    "region": "Entre Norte Grande y Zona Austral.",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Golondrina Chilena",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Jilguero",
+    "region": "Entre Norte Grande y Zona Centro",
+    "zona_total": 3,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Martín Pescador",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Mirlo",
+    "region": "Entre Norte Grande y Zona Centro",
+    "zona_total": 3,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Rara",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Cachudito",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Chercán",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Gaviota Cahuil",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Lechuza",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Loica",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Pitío",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle, cordillera"
+  },
+  {
+    "nombre_comun": "Albatros de ceja negra",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Bailarín",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Canastero común",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Chorlito Cordillerano",
+    "region": "Entre Norte Grande y Zona Centro",
+    "zona_total": 3,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Churrete Costero",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Cisne de cuello negro",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Codorniz",
+    "region": "Entre Norte Chico y Zona Sur",
+    "zona_total": 3,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Cometocino del Norte",
+    "region": "Entre Norte Grande y Norte Chico",
+    "zona_total": 2,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Diuca",
+    "region": "Entre Norte Chico y Zona Austral",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Fío-Fío",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Garza Chica",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Gorrión",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Huairavo común",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Hued-hued del Sur",
+    "region": "Entre Zona Centro y Zona Austral",
+    "zona_total": 3,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Loro Choroy",
+    "region": "Entre Zona Centro y Zona Sur",
+    "zona_total": 2,
+    "habitat": "valle, costa"
+  },
+  {
+    "nombre_comun": "Loro Tricahue",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "cordillera, valle"
+  },
+  {
+    "nombre_comun": "Pato Cortacorrientes",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pato Jergón Grande",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pato Real",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pelícano Común",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Perdiz chilena",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Picaflor Chico",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Picaflor del Norte",
+    "region": "Entre Norte Grande y Norte Chico",
+    "zona_total": 2,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Picaflor Gigante",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Pidén",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pingüino de Magallanes",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pingüino Emperador",
+    "region": "En Zona Austral",
+    "zona_total": 1,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pingüino Rey",
+    "region": "En Zona Austral",
+    "zona_total": 1,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Queltehue / Treile",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa, valle"
+  },
+  {
+    "nombre_comun": "Rayador",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Sietecolores",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Tenca",
+    "region": "Entre Norte Grande y Zona Sur",
+    "zona_total": 4,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Tordo",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Tortolita Cordillerana",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Tucúquere",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Turca",
+    "region": "Entre Norte Chico y Zona Centro.",
+    "zona_total": 2,
+    "habitat": "cordillera"
+  },
+  {
+    "nombre_comun": "Zarapito común",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Zorzal",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "valle"
+  },
+  {
+    "nombre_comun": "Pilpilén",
+    "region": "Entre Norte Grande y Zona Austral",
+    "zona_total": 5,
+    "habitat": "costa"
+  },
+  {
+    "nombre_comun": "Pingüino Macaroni",
+    "region": "En Zona Austral",
+    "zona_total":1,
+    "habitat": "costa"
+  }
+]
