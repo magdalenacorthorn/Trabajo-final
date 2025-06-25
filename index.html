@@ -4,8 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Aves de Chile por región</title>
-    </head>
-    <style>
+        <style>
           @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
          body {
@@ -29,10 +28,9 @@
               margin: 0 auto;
               text-align: center;
               background-color: #333d29;
-              padding: 4rem 2rem;
+              padding: 4rem;
               height: 500px;
               width: 1000px;
-              border-radius: 10px;
               overflow: hidden;
             }
 
@@ -104,15 +102,25 @@
               }
             }
 
+            .zonas{
+              background-color: #a4ac87;
+              margin-top: 6rem;
+              margin-bottom: 6rem;
+            }
+
             .elige{
-              padding-top: 4rem;
-              padding-left: 5rem;
+              padding-top: 2rem;
               color: #333d29;
+              font-size: calc(1.5em + 1vw);
+              text-align: center;
             }
 
             .instrucción{
-              padding-left: 5rem;
+              font-size: 1.2em;
+              font-weight: 500;
+              text-align: center;
               color: #333d29;
+              padding-bottom: 2rem;
             }
 
             .chico{
@@ -130,12 +138,82 @@
               height: auto;
             }
 
-    </style>
+            .rango{
+              background-color: #333d29;
+              height: 350px;
+              margin-top: 15rem;
+            }
 
+            .filtra{
+              font-size: calc(1.5em + 1vw);
+              padding-top: 5rem;
+              text-align: center;
+              color: #a4ac87;              
+            }
+
+            .zonaselector {
+              display: flex;
+              gap: 1rem;
+              margin-top: 5rem;
+              justify-content: center;
+            }
+
+            .zonaselector button {
+              background-color: #a4ac87;
+              color: #333d29;
+              padding: 1.5rem 4rem;
+              font-size: 1.5rem;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+            }
+
+            .zonaselector button.activo {
+              background-color: #fefae0;
+              color: #333d29;
+              transform: scale(1.05);
+            }
+
+
+            .zonaselector button:hover {
+              background-color: #596046;
+            }
+
+            .resultado-aves {
+              margin: 2rem auto;
+              padding: 1rem;
+              max-width: 1300px;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 1rem;
+            }
+
+            .ave {
+              background-color: #a4ac87;
+              border-left: 5px solid #333d29;
+              padding: 1rem;
+              margin-bottom: 1rem;
+              border-radius: 6px;
+            }
+
+            .ave h3 {
+              margin: 0 0 0.5rem 0;
+              color: #fefae0;
+            }
+
+            .ave p {
+                margin: 0.2rem 0;
+                color: #333d29;
+              }
+        </style>
+    </head>
     <body>
+
         <div class="comienzo">
-          <img src="fondo.jpg">
+          <img src="fondo.jpg" alt="Fondo" />
         </div>
+
 
         <div class="inicio">
           <h1 class="titulo">Aves de Chile</h1>
@@ -143,15 +221,20 @@
           <p class="intro">Chile se caracteriza por una gran diversidad de ecosistemas, producto de su extensa geografía que abarca desde el desierto más árido del mundo hasta los fríos bosques australes. Para comprender mejor esta riqueza natural, el país ha sido dividido en distintas zonas geográficas, cada una con condiciones climáticas y ambientales únicas que influyen directamente en la presencia y distribución de sus aves.</p>
         </div>
 
+
         <div class="pajaro-volando">
           <img src="pajaro.png" alt="Pájaro volando" />
         </div>
 
-        <h2 class="elige">¿Qué zona te gustaría ver?</h2>
-        <p class="instrucción">Haz click sobre la zona en el mapa de la izquierda</p>
+
+        <div class="zonas">
+          <h2 class="elige">¿Qué zona te gustaría ver?</h2>
+          <p class="instrucción">Haz click sobre la zona en el mapa de la izquierda</p>
+        </div>
+
 
         <div class="contenedor">
-            <img src="mapaoriginal.svg" usemap="#zonasChile" class="chico">
+            <img src="mapaoriginal.svg" usemap="#zonasChile" class="chico" alt="Mapa de Chile">
 
             <map name="zonasChile">
               <area shape="rect" coords="37,52,130,170" alt="Norte Grande" title="Norte Grande" onclick="mostrarZona('ngrande')" />
@@ -162,11 +245,44 @@
             </map>
 
             <div class="zonacontenido">
-              <img id="avesImagen" src="nortegrande.png" class="nortegrande">
-
+              <img id="avesImagen" src="nortegrande.png" class="nortegrande" alt="Aves Norte Grande" />
+            </div>
         </div>
 
+
+        <div class="rango">
+
+            <h2 class="filtra">Filtra aves por cantidad de zonas en que habitan:</h2>
+
+            <div class="zonaselector">
+              <button onclick="filtrarPorZona(1)">1</button>
+              <button onclick="filtrarPorZona(2)">2</button>
+              <button onclick="filtrarPorZona(3)">3</button>
+              <button onclick="filtrarPorZona(4)">4</button>
+              <button onclick="filtrarPorZona(5)">5</button>
+            </div>
+        </div>
+
+            <div id="resultado-aves" class="resultado-aves"></div>
+
         <script>
+          let data = [];
+
+          async function cargarDatos() {
+            try {
+              const consulta = await fetch("https://raw.githubusercontent.com/magdalenacorthorn/Trabajo-final/refs/heads/main/csvjsontres.json");
+              data = await consulta.json();
+              console.log("Datos cargados:", data);
+              // Mostrar datos por defecto al cargar (por ejemplo, 5 zonas)
+              filtrarPorZona(5);
+            } catch (error) {
+              console.error("Error cargando datos:", error);
+              const contenedor = document.getElementById("resultado-aves");
+              contenedor.innerHTML = "<p>Error al cargar datos. Intenta recargar la página.</p>";
+            }
+          }
+
+          cargarDatos();
 
           function mostrarZona(zona) {
               const imagen = document.getElementById('avesImagen');
@@ -188,12 +304,45 @@
                 imagen.alt = 'Aves de la Zona Austral';
               }
             }
-            async function datos() {
-                const consulta = await fetch("https://raw.githubusercontent.com/magdalenacorthorn/Trabajo-final/refs/heads/main/csvjsontres.json");
-                data = await consulta.json();
-                console.log(data);
-                }
-            datos().catch((error) => console.error(error));
+
+          function filtrarPorZona(zonaCantidad) {
+              const contenedor = document.getElementById("resultado-aves");
+              contenedor.innerHTML = "";
+
+              // DESACTIVAR todos los botones primero
+              const botones = document.querySelectorAll(".zonaselector button");
+              botones.forEach(boton => boton.classList.remove("activo"));
+
+              // ACTIVAR el botón que fue presionado
+              const botonPresionado = document.querySelector(`.zonaselector button:nth-child(${zonaCantidad})`);
+              if (botonPresionado) {
+                botonPresionado.classList.add("activo");
+              }
+
+              // Filtrar aves
+              const filtradas = data.filter(ave =>
+                parseInt(ave.zona_total) === zonaCantidad &&
+                typeof ave.habitat === "string" &&
+                /valle/i.test(ave.habitat)
+              );
+
+              if (filtradas.length === 0) {
+                contenedor.innerHTML = `<p>No se encontraron aves que vivan en el valle y habiten en ${zonaCantidad} zona(s).</p>`;
+                return;
+              }
+
+              filtradas.forEach(ave => {
+                const aveElemento = document.createElement("div");
+                aveElemento.classList.add("ave");
+                aveElemento.innerHTML = `
+                  <h3>${ave.nombre_comun}</h3>
+                  <p><strong>Región:</strong> ${ave.region}</p>
+                  <p><strong>Hábitat:</strong> ${ave.habitat}</p>
+                `;
+                contenedor.appendChild(aveElemento);
+              });
+            }
         </script>
 
     </body>
+</html>
