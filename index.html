@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+      <!-- ChatGpt fue utilizado en el desarrollo de esta página, principalmente para la búsqueda de errores en el código y ayuda con las funciones de filtro -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Aves de Chile por región</title>
@@ -206,6 +207,16 @@
                 margin: 0.2rem 0;
                 color: #333d29;
               }
+
+            .piepagina {
+              background-color: #333d29;
+              color: #fefae0;
+              text-align: center;
+              padding: 1.5rem 0;
+              font-size: 1rem;
+              margin-top: 4rem;
+            }
+
         </style>
     </head>
     <body>
@@ -309,17 +320,14 @@
               const contenedor = document.getElementById("resultado-aves");
               contenedor.innerHTML = "";
 
-              // DESACTIVAR todos los botones primero
               const botones = document.querySelectorAll(".zonaselector button");
               botones.forEach(boton => boton.classList.remove("activo"));
 
-              // ACTIVAR el botón que fue presionado
               const botonPresionado = document.querySelector(`.zonaselector button:nth-child(${zonaCantidad})`);
               if (botonPresionado) {
                 botonPresionado.classList.add("activo");
               }
 
-              // Filtrar aves
               const filtradas = data.filter(ave =>
                 parseInt(ave.zona_total) === zonaCantidad &&
                 typeof ave.habitat === "string" &&
@@ -343,6 +351,10 @@
               });
             }
         </script>
+
+        <footer class="piepagina">
+          <p>2025</p> <p>Hecho por Magdalena Corthorn</p> <p>Desarrollo Web y Diseño Visual de Información</p>
+        </footer>
 
     </body>
 </html>
